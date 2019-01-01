@@ -1,9 +1,13 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
 .field {
   position: relative;
   padding-top: 10px;
 
   input,
-  textarea {
+  textarea,
+  select {
     -webkit-transition: border 0.4s;
     transition: border 0.4s;
     -webkit-box-sizing: border-box;
@@ -19,6 +23,32 @@
     font-size: 16px;
     line-height: 16px;
     border-radius: 3px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-top: 14px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .select-arrow {
+    @extend %fa-icon;
+    @extend .fas;
+
+    position: absolute;
+    right: 0;
+    top: 28px;
+    z-index: 1;
+  }
+
+  .select-arrow::before {
+    content: fa-content($fa-var-chevron-down);
+    color: #727272;
+    position: absolute;
+    right: 20px;
+    pointer-events: none;
   }
 
   textarea {

@@ -1,4 +1,6 @@
 const path = require('path');
+const bodyParser = require('body-parser');
+const request = require('sync-request');
 
 const config = require('./site.config');
 const loaders = require('./webpack.loaders');
@@ -27,6 +29,22 @@ module.exports = {
     open: true,
     port: config.port,
     host: config.dev_host,
+    setup: function(app) {
+      app.use(bodyParser.json());
+      app.use(bodyParser.urlencoded({
+          extended: true
+      }));
+
+      app.post(/^\/(URL1|URL2|URL3)\//, function(req, res) {
+          var serviceCallResponse = request('POST', 'your app server url here' + req.originalUrl, {
+              json:req.body
+          });
+          res.send(serviceCallResponse.getBody('utf8'));
+      });
+    },
+    proxy: {
+        '*/other URLs proxy/*': 'your app server url here'
+    },
   },
   module: {
     rules: loaders,
