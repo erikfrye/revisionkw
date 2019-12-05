@@ -9,13 +9,13 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: '(re)vision',
+  site_name: 'Static Site Boilerplate',
 
   // Your website's description, used for favicon meta tags
-  site_description: '(re)vision home organizing Kitchener-Waterloo',
+  site_description: 'A modern boilerplate for static website development',
 
   // Your website's URL, used for sitemap
-  site_url: 'https://revisionkw.com',
+  site_url: '',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
