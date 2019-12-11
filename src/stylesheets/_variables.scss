@@ -1,3 +1,10 @@
 $primary-color: #1e2456;
 $secondary-color: #104c64;
 $third-color: #b5cd9d;
+
+$theme-colors: (
+  "primary": #1e2456,
+  "secondary": #b5cd9d
+);
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";

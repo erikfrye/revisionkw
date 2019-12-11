@@ -1,0 +1,65 @@
+.field {
+  position: relative;
+  padding-top: 10px;
+
+  input,
+  textarea {
+    -webkit-transition: border 0.4s;
+    transition: border 0.4s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 12px 12px;
+    background: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    outline: 0;
+    height: 50px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  label {
+    display: inline-block;
+    max-width: 100%;
+    top: 24px;
+    left: 13px;
+    width: auto;
+    font-size: 16px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: absolute;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: text;
+  }
+
+  ::-webkit-input-placeholder { color: transparent; }
+
+  :-moz-placeholder { /* Firefox 18- */ color: transparent; }
+
+  ::-moz-placeholder { /* Firefox 19+ */ color: transparent; }
+
+  :-ms-input-placeholder { color: transparent; }
+
+  &.has-focus {
+    label {
+      font-size: 11px;
+      top: 15px;
+    }
+
+    ::-webkit-input-placeholder { color: gray; }
+
+    :-moz-placeholder { /* Firefox 18- */ color: gray; }
+
+    ::-moz-placeholder { /* Firefox 19+ */ color: gray; }
+
+    :-ms-input-placeholder { color: gray; }
+  }
+}

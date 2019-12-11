@@ -1,3 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
 .full-height {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.half-height {
+  height: 50vh;
+  min-height: 400px;
+}
+
+.navbar {
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(30px) saturate(125%);
+    -webkit-backdrop-filter: blur(30px) saturate(125%);
+    transition: all 0.3s;
+  }
 }

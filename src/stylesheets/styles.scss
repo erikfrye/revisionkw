@@ -1,6 +1,9 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-@import "~bootstrap";
 @import "variables";
+@import "~bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 @import "typography";
 @import "layout";
+@import "forms";
