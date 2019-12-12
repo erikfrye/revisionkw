@@ -42,7 +42,7 @@ window.addEventListener('load', () => {
 
 $(document).scroll(function scroll() {
   const $nav = $('#navbar');
-  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  $nav.toggleClass('scrolled', $(this).scrollTop() >= $nav.position().top);
 });
 
 $(document).ready(() => {

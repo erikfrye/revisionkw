@@ -16,10 +16,22 @@ body {
 }
 
 .navbar {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
   &.scrolled {
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(30px) saturate(125%);
     -webkit-backdrop-filter: blur(30px) saturate(125%);
     transition: all 0.3s;
+
+    .navbar-brand {
+      left: 0;
+    }
+  }
+
+  .navbar-brand {
+    position: relative;
+    left: -160px;
+    transition: left 0.5s;
   }
 }

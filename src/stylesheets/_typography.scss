@@ -1,3 +1,15 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  //  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 h1 {
   font-size: 40px;
 }
@@ -9,4 +21,9 @@ h1 {
   text-align: center;
   padding: 10px;
   border-radius: 50%;
+  background-color: $primary-color;
+}
+
+.social-icons a:hover i {
+  background-color: $secondary-color;
 }

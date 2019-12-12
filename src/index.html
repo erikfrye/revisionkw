@@ -16,6 +16,9 @@
   <meta charset="utf-8">
   <title>(re)vision | KW Home Organizer</title>
   <meta name="description" content="" />
+
+  <!--link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet"-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Hind+Madurai&display=swap" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
@@ -24,16 +27,15 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div id="home" class="row hero position-relative justify-content-md-center half-height bg-dark">
+  <div id="home" class="row hero position-relative justify-content-md-center half-height bg-light">
     <div class="col align-self-center text-center">
-      <img clsss="img-fluid" src="images/revision_full_greenTeal_400px.png" alt="revision logo">
-      <h1>Something big is coming!</h1>
-      <a href="#contact" class="btn btn-primary">Get in touch ></a>
+      <h1 class="text-hide m-auto" style="background: url(images/revision_full_tealPurple_800px.svg);width:400px;height:122px; background-size:cover;">(re)vision Home Organizing</h1>
+      <h2>Home organzing for real life</h2>
     </div>
   </div>
 
   <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img src="images/revision_full_tealPurple_800px.svg" height="40" alt="revision logo" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -157,15 +159,15 @@
           <p><strong>#FollowMe</strong></p>
           <div class="row social-icons">
             <div class="col-sm-auto">
-              <a href="#"><i class="fab fa-instagram bg-primary text-light"></i></a>
+              <a href="#"><i class="fab fa-instagram text-light"></i></a>
             </div>
             <div class="col-sm-auto">
-              <a href="#"><i class="fab fa-facebook-f bg-primary text-light"></i></a>
+              <a href="#"><i class="fab fa-facebook-f text-light"></i></a>
             </div>
           </div>
         </div>
         <div class="col-md-6 align-self-center">
-          <form name="contact" class="needs-validation" novalidate netlify>
+          <form name="contact" class="needs-validation" novalidate netlify-honeypot="bot-field" data-netlify-recaptcha="true" netlify>
             <div class="row align-items-center">
               <div class="col">
                 <div class="field form-group">
@@ -192,6 +194,10 @@
             </div>
             <div class="row justify-content-md-center">
               <div class="col">
+                <span class="d-none">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </span>
+                <div data-netlify-recaptcha="true"></div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
