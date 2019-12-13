@@ -6,6 +6,13 @@ body {
   position: relative;
 }
 
+.hero h1 {
+  background: url(../images/revision_full_tealPurple_800px.svg);
+  background-size: cover;
+  width: 400px;
+  height: 122px;
+}
+
 .full-height {
   min-height: 100vh;
 }
