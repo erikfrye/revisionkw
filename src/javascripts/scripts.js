@@ -3,6 +3,7 @@ import $ from 'jquery';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/scrollspy';
 import LazyLoad from 'vanilla-lazyload';
+import 'magnific-popup';
 
 window.jQuery = $;
 window.$ = $;
@@ -47,4 +48,11 @@ $(document).scroll(function scroll() {
 
 $(document).ready(() => {
   lazyLoadInstance.update();
+
+  $('.ajax-popup').magnificPopup({
+    type: 'ajax',
+    gallery: {
+      enabled: true,
+    },
+  });
 });

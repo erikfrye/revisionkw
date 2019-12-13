@@ -1,0 +1,19 @@
+.white-popup-block {
+  position: relative;
+  background: #fff;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+
+  img {
+    width: 100%;
+  }
+
+  .image {
+    padding: 0;
+  }
+
+  .info {
+    padding: $spacer * 2;
+  }
+}
