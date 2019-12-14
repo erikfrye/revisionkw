@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
 .white-popup-block {
   position: relative;
   background: #fff;
@@ -15,5 +17,39 @@
 
   .info {
     padding: $spacer * 2;
+  }
+}
+
+[class*='mfp-arrow-'] {
+  &::before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.mfp-arrow-left {
+  &::before {
+    content: '\f053';
+    border-right: none;
+    float: left;
+  }
+
+  &::after {
+    border-right: none;
+    margin-right: 0;
+  }
+}
+
+.mfp-arrow-right {
+  &::before {
+    content: '\f054';
+    border-left: none;
+    float: right;
+  }
+
+  &::after {
+    border-left: none;
+    margin-left: 0;
   }
 }

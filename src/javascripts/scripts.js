@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/scrollspy';
+import 'bootstrap/js/dist/collapse';
 import LazyLoad from 'vanilla-lazyload';
 import 'magnific-popup';
 
@@ -40,6 +41,19 @@ window.addEventListener('load', () => {
     }, false);
   });
 }, false);
+
+$('#contact').submit((e) => {
+  e.preventDefault();
+
+  const $form = $('#contact');
+  $.post($form.attr('action'), $form.serialize())
+    .then(() => {
+      alert('Thank you! We will get back to you within 24 hours.');
+    })
+    .catch(() => {
+      alert('Oops... something went wrong. Please try again.');
+    });
+});
 
 $(document).scroll(function scroll() {
   const $nav = $('#navbar');
