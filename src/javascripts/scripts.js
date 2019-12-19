@@ -48,11 +48,14 @@ $('#contact').submit((e) => {
 
   const $form = $('#contact');
   $.post($form.attr('action'), $form.serialize())
-    .then(() => {
-      alert('Thank you! We will get back to you within 24 hours.');
+    .done(() => {
+      $('#form-success').removeClass('d-none');
+      $('#form-error').addClass('d-none');
     })
-    .catch(() => {
-      alert('Oops... something went wrong. Please try again.');
+    .catch((e2) => {
+      console.log(e2);
+      $('#form-success').addClass('d-none');
+      $('#form-error').removeClass('d-none');
     });
 });
 
