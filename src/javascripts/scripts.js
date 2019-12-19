@@ -4,6 +4,7 @@ import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/scrollspy';
 import 'bootstrap/js/dist/collapse';
 import LazyLoad from 'vanilla-lazyload';
+import ScrollMagic from 'scrollmagic';
 import 'magnific-popup';
 
 window.jQuery = $;
@@ -69,4 +70,20 @@ $(document).ready(() => {
       enabled: true,
     },
   });
+});
+
+/* Scroll Reveal */
+const controller = new ScrollMagic.Controller();
+$(document).ready(() => {
+  const revealElements = $('#method .step, #gallery .step');
+  for (let i = 0; i < revealElements.length; i += 1) { // create a scene for each element
+    new ScrollMagic.Scene({
+      triggerElement: revealElements[i], // y value not modified, so we can use element as trigger
+      triggerHook: 0.9 - (0.05 * i),
+      offset: 50, // move trigger to center of element
+      reverse: false,
+    })
+      .setClassToggle(revealElements[i], 'visible') // add class toggle
+      .addTo(controller);
+  }
 });
