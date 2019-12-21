@@ -6,11 +6,45 @@ body {
   position: relative;
 }
 
-.hero h1 {
-  background: url(../images/revision_full_tealPurple_800px.svg);
-  background-size: cover;
-  width: 400px;
-  height: 122px;
+.hero h1 .logo {
+  width: 600px;
+  height: 183px;
+
+  #vision_group {
+    animation: 1.5s ease 0s normal forwards 1 fadeinLogo;
+  }
+}
+
+.hero h2 {
+  animation: 2.5s ease 0s normal forwards 1 fadeinTagLine;
+}
+
+@keyframes fadeinLogo {
+  0% { opacity: 0; }
+
+  66% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeinTagLine {
+  0% { opacity: 0; }
+
+  66% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .full-height {
@@ -43,6 +77,11 @@ body {
       left: -160px;
       transition: left 0.5s;
     }
+  }
+
+  .logo {
+    width: 130.25px;
+    height: 40px;
   }
 }
 
@@ -181,4 +220,13 @@ body {
   transform: translateY(40px);
 
   @include step-visible();
+}
+
+/* Images */
+img.lazy {
+  @include step;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
