@@ -19,17 +19,12 @@ h1 {
 }
 
 .social-icons i {
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: $primary-color;
+  font-size: 50px;
+  color: $primary-color;
 }
 
 .social-icons a:hover i {
-  background-color: $secondary-color;
+  color: $secondary-color;
 }
 
 #pricing h3 {
