@@ -55,9 +55,7 @@
   }
 }
 
-
 // Slick Slider
-
 $slick-arrow-color: white;
 
 .slick-prev,
@@ -66,8 +64,8 @@ $slick-arrow-color: white;
   display: block;
   height: 20px;
   width: 20px;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
@@ -79,18 +77,23 @@ $slick-arrow-color: white;
   border: none;
   outline: none;
   z-index: 2;
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     outline: none;
     background: transparent;
     color: transparent;
-    &:before {
-        // opacity: $slick-opacity-on-hover;
+
+    &::before {
+      // opacity: $slick-opacity-on-hover;
     }
   }
-  &.slick-disabled:before {
+
+  &.slick-disabled::before {
     // opacity: $slick-opacity-not-active;
   }
-  &:before {
+
+  &::before {
     font-family: "Font Awesome 5 Free", sans-serif;
     font-size: 20px;
     line-height: 1;
@@ -104,7 +107,7 @@ $slick-arrow-color: white;
 .slick-prev {
   left: 10px;
 
-  &:before {
+  &::before {
     content: '\f053';
   }
 }
@@ -112,7 +115,7 @@ $slick-arrow-color: white;
 .slick-next {
   right: 10px;
 
-  &:before {
+  &::before {
     content: '\f054';
   }
 }
@@ -132,6 +135,7 @@ $slick-arrow-color: white;
   padding: 0;
   margin: 0;
   width: 100%;
+
   li {
     position: relative;
     display: inline-block;
@@ -140,6 +144,7 @@ $slick-arrow-color: white;
     margin: 0 5px;
     padding: 0;
     cursor: pointer;
+
     button {
       border: 0;
       background: transparent;
@@ -147,18 +152,22 @@ $slick-arrow-color: white;
       height: 20px;
       width: 20px;
       outline: none;
-      line-height: 0px;
-      font-size: 0px;
+      line-height: 0;
+      font-size: 0;
       color: transparent;
       padding: 5px;
       cursor: pointer;
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         outline: none;
-        &:before {
+
+        &::before {
           // opacity: $slick-opacity-on-hover;
         }
       }
-      &:before {
+
+      &::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -175,7 +184,8 @@ $slick-arrow-color: white;
         -moz-osx-font-smoothing: grayscale;
       }
     }
-    &.slick-active button:before {
+
+    &.slick-active button::before {
       // color: $slick-dot-color-active;
       // opacity: $slick-opacity-default;
     }
