@@ -5,8 +5,6 @@ import 'bootstrap/js/dist/scrollspy';
 import 'bootstrap/js/dist/collapse';
 import LazyLoad from 'vanilla-lazyload';
 import ScrollMagic from 'scrollmagic';
-import 'magnific-popup';
-import 'slick-carousel';
 
 window.jQuery = $;
 window.$ = $;
@@ -97,7 +95,7 @@ $(document).scroll(function scroll() {
 $(document).ready(() => {
   lazyLoadInstance.update();
 
-  $('.ajax-popup').magnificPopup({
+  /* $('.ajax-popup').magnificPopup({
     type: 'ajax',
     closeOnBgClick: false,
     gallery: {
@@ -106,11 +104,10 @@ $(document).ready(() => {
     callbacks: {
       ajaxContentAdded: function loaded() {
         // Ajax content is loaded and appended to DOM
-        console.log('loaded');
         $('.image-slider').slick();
       },
     },
-  });
+  }); */
 });
 
 /* Scroll Reveal */
