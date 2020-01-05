@@ -1,3 +1,32 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  //  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 h1 {
   font-size: 40px;
+}
+
+.social-icons i {
+  font-size: 50px;
+  color: $primary-color;
+}
+
+.social-icons a:hover i {
+  color: $secondary-color;
+}
+
+#pricing h3 span.number {
+  font-size: 1.5rem;
 }
