@@ -12,6 +12,7 @@ const html = {
       loader: 'html-loader',
       options: {
         interpolate: true,
+        attrs: ['img:src', 'img:data-src'],
       },
     },
   ],
