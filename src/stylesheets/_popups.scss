@@ -1,24 +1,42 @@
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~slick-carousel/slick/slick";
 
-.white-popup-block {
-  position: relative;
-  background: #fff;
-  width: auto;
-  max-width: 800px;
-  margin: 20px auto;
+.mfp-container {
+  padding: 0;
+}
 
-  img {
-    width: 100%;
+.info-box {
+  // background: #ccc;
+
+  .image,
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .image {
     padding: 0;
+    height: 100vh;
+  }
+
+  img {
+    height: 100%;
   }
 
   .info {
-    padding: $spacer * 2;
+    padding: $spacer/2;
+    color: white;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+    div {
+      width: 50%;
+    }
   }
+
 }
 
 [class*='mfp-arrow-'] {
