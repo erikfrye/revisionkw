@@ -5,6 +5,10 @@ import 'bootstrap/js/dist/scrollspy';
 import 'bootstrap/js/dist/collapse';
 import LazyLoad from 'vanilla-lazyload';
 import ScrollMagic from 'scrollmagic';
+import 'lightgallery';
+import 'lg-thumbnail';
+import 'lg-hash';
+
 
 window.jQuery = $;
 window.$ = $;
@@ -94,20 +98,9 @@ $(document).scroll(function scroll() {
 
 $(document).ready(() => {
   lazyLoadInstance.update();
-
-  /* $('.ajax-popup').magnificPopup({
-    type: 'ajax',
-    closeOnBgClick: false,
-    gallery: {
-      enabled: true,
-    },
-    callbacks: {
-      ajaxContentAdded: function loaded() {
-        // Ajax content is loaded and appended to DOM
-        $('.image-slider').slick();
-      },
-    },
-  }); */
+  $('#lightgallery').lightGallery({
+    thumbnail: true,
+  });
 });
 
 /* Scroll Reveal */
