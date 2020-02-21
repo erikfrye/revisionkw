@@ -46,51 +46,6 @@ window.addEventListener('load', () => {
   });
 }, false);
 
-// $('#contact').submit((e) => {
-//   e.preventDefault();
-
-//   const $form = $('#contact');
-//   $.post($form.attr('action'), $form.serialize())
-//     .done(() => {
-//       $('#form-success').removeClass('d-none');
-//       $('#form-error').addClass('d-none');
-//     })
-//     .catch((e2) => {
-//       console.log(e2);
-//       $('#form-success').addClass('d-none');
-//       $('#form-error').removeClass('d-none');
-//     });
-// });
-
-// const encode = (data) => {
-//   return Object.keys(data)
-//     .map((key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
-//     .join('&');
-// };
-
-// function handleFormSubmit(event) {
-//   event.preventDefault();
-//   const data = [...event.target.elements]
-//     .filter((element) => Boolean(element.name))
-//     .reduce((json, element) => {
-//       json[element.name] = element.value;
-//       return json;
-//     }, {});
-//   fetch(event.target.action, {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//     body: encode(data),
-//   })
-//     .then(() => {
-//       $('#form-success').removeClass('d-none');
-//       $('#form-error').addClass('d-none');
-//     })
-//     .catch(() => {
-//       $('#form-success').addClass('d-none');
-//       $('#form-error').removeClass('d-none');
-//     });
-// }
-
 $(document).scroll(function scroll() {
   const $nav = $('#navbar');
   $nav.toggleClass('scrolled', $(this).scrollTop() >= $nav.position().top);

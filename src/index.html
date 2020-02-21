@@ -367,13 +367,7 @@
           </div>
         </div>
         <div class="col-md-6 align-self-center">
-          <div id="form-success" class="d-none alert alert-success" role="alert">
-            Thank you! We will get back to you within 24 hours.
-          </div>
-          <div id="form-error" class="d-none alert alert-danger" role="alert">
-            Oops! Something went wrong. Please try again.
-          </div>
-          <form name="contact" method="POST" class="needs-validation" novalidate netlify-honeypot="bot-field" netlify>
+          <form id="contact" name="contact" method="POST" class="needs-validation" action="/thank-you.html" novalidate netlify-honeypot="bot-field" netlify>
             <div class="row align-items-center">
               <div class="col">
                 <div class="field form-group">
@@ -399,6 +393,22 @@
                 <div class="field form-group">
                   <input name="phone" type="tel" class="form-control" id="phone" placeholder="222-222-2222">
                   <label for="phone">phone</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="field form-group">
+                  <select name="how-did-you-hear" class="form-control" id="how-did-you-hear">
+                    <option val=""></option>
+                    <option val="facebook">Facebook</option>
+                    <option val="instagram">Instagram</option>
+                    <option val="friend">Friend or family</option>
+                    <option val="search">Google search</option>
+                    <option val="other">Other</option>
+                  </select>
+                  <label for="how-did-you-hear">how did you hear about us?</label>
+                  <span class="select-arrow"></span>
                 </div>
               </div>
             </div>
