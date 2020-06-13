@@ -367,10 +367,7 @@
           </div>
         </div>
         <div class="col-md-6 align-self-center">
-          <form id="contact" name="contact" netlify-honeypot="bot-field" method="POST" class="needs-validation" action="/thank-you.html" novalidate netlify-honeypot="bot-field" netlify>
-            <p class="d-none">
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
+          <form id="contact" name="contact" data-netlify-recaptcha="true" method="POST" class="needs-validation" action="/thank-you.html" novalidate netlify-honeypot="bot-field" netlify>
             <div class="row align-items-center">
               <div class="col">
                 <div class="field form-group">
@@ -423,11 +420,15 @@
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col">
+                <div class="field form-group">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+              </div>
+            </div>
             <div class="row justify-content-md-center">
               <div class="col">
-                <span class="d-none">
-                  <label>don’t fill this out if you're a human: <input name="bot-field" /></label>
-                </span>
                 <button type="submit" class="btn btn-primary">let's chat</button>
               </div>
             </div>
