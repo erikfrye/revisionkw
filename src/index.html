@@ -367,7 +367,10 @@
           </div>
         </div>
         <div class="col-md-6 align-self-center">
-          <form id="contact" name="contact" method="POST" class="needs-validation" action="/thank-you.html" novalidate netlify-honeypot="bot-field" netlify>
+          <form id="contact" name="contact" netlify-honeypot="bot-field" method="POST" class="needs-validation" action="/thank-you.html" novalidate netlify-honeypot="bot-field" netlify>
+            <p class="d-none">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="row align-items-center">
               <div class="col">
                 <div class="field form-group">
